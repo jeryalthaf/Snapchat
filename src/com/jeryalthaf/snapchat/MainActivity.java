@@ -17,6 +17,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.parse.ParseAnalytics;
+
 public class MainActivity extends Activity implements ActionBar.TabListener {
 
 	/**
@@ -33,11 +35,14 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 	 */
 	ViewPager mViewPager;
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 			
+		ParseAnalytics.trackAppOpened(getIntent());
+		
 		Intent intent = new Intent(this,LoginActivity.class);
 		startActivity(intent);
 		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

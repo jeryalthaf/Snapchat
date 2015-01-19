@@ -14,5 +14,7 @@
    	<string name="title_section1">Section1</string>
    	<string name="title_section2">Section2</string>
    	<string name="title_section3">Section3</string>
+   	<string name="signup_error_message">Please enter a username,password or email address</string>
+   	<string name="signup_error_title">Oops!</string>
 
 </resources>
